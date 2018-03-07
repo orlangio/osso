@@ -25,6 +25,14 @@
     Latest version available at:
       https://github.com/orlangio/osso
 
+=head1 DESCRIPTION
+   This server store several objects values and let client call triggers for changes in this objects.
+   The basic scenario is several browser-based clients working on same data and wishing to see mutual changes.
+   Each javascript client perform a call to a php-script which send a trigger request to this server via udp.
+   If there is a change before timeout the php-script quickly reply to js-client otherwise will reply with
+   a NO-CHANGES message after a timeout.
+   Tipical timeout will be 28 seconds.
+  
 =head1 SYNOPSIS
 
   FIELD TYPE:
